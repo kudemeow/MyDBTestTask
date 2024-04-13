@@ -67,7 +67,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Model\Employee.cs">
+      <DependentUpon>MyDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MyDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Organization.cs">
+      <DependentUpon>MyDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>MyDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Worker.cs">
+      <DependentUpon>MyDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CreateEmployeeViewModel.cs" />
+    <Compile Include="ViewModel\CreateOrganizationViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Page Include="View\CreateEmployeeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CreateOrganizationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -75,12 +103,30 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelCommand.cs" />
+    <Compile Include="View\CreateEmployeeView.xaml.cs">
+      <DependentUpon>CreateEmployeeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateOrganizationView.xaml.cs">
+      <DependentUpon>CreateOrganizationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\MyDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MyDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -98,6 +144,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\MyDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MyDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\MyDBModel.edmx.diagram">
+      <DependentUpon>MyDBModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -110,6 +163,19 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\MyDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyDBModel.edmx</DependentUpon>
+      <LastGenOutput>MyDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\MyDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MyDBModel.edmx</DependentUpon>
+      <LastGenOutput>MyDBModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
