@@ -23,5 +23,14 @@ namespace testTaskDB.View
         {
             InitializeComponent();
         }
+
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindowView mainWindowView = new MainWindowView();
+
+            mainWindowView.Show();
+
+            Close();
+        }
     }
 }

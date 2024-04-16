@@ -84,9 +84,9 @@
     <Compile Include="Model\Worker.cs">
       <DependentUpon>MyDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\CreateEmployeeViewModel.cs" />
-    <Compile Include="ViewModel\CreateOrganizationViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\OutputEmployeeAndOrganization.xaml.cs">
+      <DependentUpon>OutputEmployeeAndOrganization.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\CreateEmployeeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,8 +103,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelCommand.cs" />
     <Compile Include="View\CreateEmployeeView.xaml.cs">
       <DependentUpon>CreateEmployeeView.xaml</DependentUpon>
     </Compile>
@@ -115,6 +113,10 @@
       <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\OutputEmployeeAndOrganization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\MyDBModel.Context.cs">

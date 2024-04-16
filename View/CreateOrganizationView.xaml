@@ -7,6 +7,63 @@
         mc:Ignorable="d"
         Title="CreateOrganization" Height="450" Width="800">
     <Grid>
-        
+        <TextBox  Width="450" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Height="43" x:Name="NameOrg" Margin="54,40,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Название организации" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,40,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=NameOrg}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Height="43" x:Name="ITNOrg" Margin="54,110,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="ИНН" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,110,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=ITNOrg}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Height="43" x:Name="LegalAddressOrg" Margin="54,180,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Юридический адрес" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,180,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=LegalAddressOrg}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Height="43" x:Name="ActualAddressOrg" Margin="54,250,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Фактический адрес" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,250,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=ActualAddressOrg}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <Button x:Name="Return" Content="Назад" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="628,356,0,0" VerticalAlignment="Top" Width="123" Click="Return_Click"/>
+        <Button x:Name="Save" Content="Сохранить" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="628,291,0,0" VerticalAlignment="Top" Width="123" Click="Save_Click"/>
     </Grid>
 </Window>

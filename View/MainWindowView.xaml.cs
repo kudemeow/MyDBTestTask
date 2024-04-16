@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using testTaskDB.View;
-using testTaskDB.ViewModel;
 
 namespace testTaskDB
 {
@@ -12,27 +11,31 @@ namespace testTaskDB
         public MainWindowView()
         {
             InitializeComponent();
-
-            var context = new MainWindowViewModel();
-
-            context.opened += OpenEvent;
-
-            DataContext = context;
         }
-        //Org, Emp
-        public void OpenEvent(object sender, RoutedEventArgs e)
+
+        private void Org_Click(object sender, RoutedEventArgs e)
         {
             CreateOrganizationView createOrganizationView = new CreateOrganizationView();
+
+            createOrganizationView.Show();
+
+            Close();
+        }
+
+        private void Emp_Click(object sender, RoutedEventArgs e)
+        {
             CreateEmployeeView createEmployeeView = new CreateEmployeeView();
 
-            if (sender.Equals(Org))
-            {
-                createOrganizationView.Show();
-            }
-            else
-            {
-                createEmployeeView.Show();
-            }
+            createEmployeeView.Show();
+
+            Close();
+        }
+
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            OutputEmployeeAndOrganization outputEmployeeAndOrganization = new OutputEmployeeAndOrganization();
+
+            outputEmployeeAndOrganization.Show();
 
             Close();
         }

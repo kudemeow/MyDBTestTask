@@ -5,8 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testTaskDB.View"
         mc:Ignorable="d"
-        Title="CreateEmployee" Height="450" Width="800">
+        Title="CreateEmployee" Height="550" Width="800">
     <Grid>
-        
+        <TextBox  Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" x:Name="Surname" Margin="54,40,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Фамилия" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,40,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=Surname}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" x:Name="Name" Margin="54,100,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Имя" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,100,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=Name}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" x:Name="FatherName" Margin="54,160,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Отчество" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,160,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=FatherName}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" x:Name="Birthday" Margin="54,220,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Дата рождения" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,220,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=Birthday}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" x:Name="SerPassport" Margin="54,280,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Серия паспорта" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,280,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=SerPassport}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox  Width="450" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" x:Name="NumPassport" Margin="54,340,0,0"/>
+        <TextBlock IsHitTestVisible="False" Text="Номер паспорта" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,340,0,0" Foreground="DarkGray" Height="43" Width="450">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=NumPassport}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <Button x:Name="Return" Content="Назад" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="638,455,0,0" VerticalAlignment="Top" Width="123" Click="Return_Click"/>
+        <Button x:Name="Save" Content="Сохранить" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="638,388,0,0" VerticalAlignment="Top" Width="123"/>
     </Grid>
 </Window>

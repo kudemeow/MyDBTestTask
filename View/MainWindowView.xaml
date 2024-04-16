@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Org" Content="Add a new organization" HorizontalAlignment="Center" FontSize="30" Height="58" Margin="0,104,0,0" VerticalAlignment="Top" Width="496"/>
-        <Button x:Name="Emp" Content="Add a new employee" HorizontalAlignment="Center" FontSize="30" Height="58" Margin="0,268,0,0" VerticalAlignment="Top" Width="496"/>
+        <Button x:Name="Org" Content="Добавить новую организацию" HorizontalAlignment="Center" FontSize="30" Height="58" Margin="0,58,0,0" VerticalAlignment="Top" Width="496" Click="Org_Click"/>
+        <Button x:Name="Emp" Content="Добавить нового сотрудника" HorizontalAlignment="Center" FontSize="30" Height="58" VerticalAlignment="Center" Width="496" Click="Emp_Click"/>
+        <Button x:Name="New" Content="Все организации и сотрудники" HorizontalAlignment="Center" FontSize="30" Height="58" Margin="0,315,0,0" VerticalAlignment="Top" Width="496" Click="New_Click"/>
     </Grid>
 </Window>

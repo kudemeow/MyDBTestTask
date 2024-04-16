@@ -11,17 +11,23 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using testTaskDB.Model;
 
 namespace testTaskDB.View
 {
     /// <summary>
-    /// Логика взаимодействия для CreateOrganization.xaml
+    /// Логика взаимодействия для OutputEmployeeAndOrganization.xaml
     /// </summary>
-    public partial class CreateOrganizationView : Window
+    public partial class OutputEmployeeAndOrganization : Window
     {
-        public CreateOrganizationView()
+        public OutputEmployeeAndOrganization()
         {
             InitializeComponent();
+
+            MyDBEntities db = new MyDBEntities();
+            
+            OrgTable.ItemsSource = db.Organization.ToList();
+            EmpTable.ItemsSource = db.Employee.ToList();
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
@@ -31,11 +37,6 @@ namespace testTaskDB.View
             mainWindowView.Show();
 
             Close();
-        }
-
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
