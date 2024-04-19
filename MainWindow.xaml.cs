@@ -1,32 +1,32 @@
 ﻿using System.Windows;
-using testTaskDB.View;
+using testTaskDB;
 
 namespace testTaskDB
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindowView : Window
+    public partial class MainWindow : Window
     {
-        public MainWindowView()
+        public MainWindow()
         {
             InitializeComponent();
         }
 
         private void Org_Click(object sender, RoutedEventArgs e)
         {
-            CreateOrganizationView createOrganizationView = new CreateOrganizationView();
+            CreateOrganization createOrganization = new CreateOrganization();
 
-            createOrganizationView.Show();
+            createOrganization.Show();
 
             Close();
         }
 
         private void Emp_Click(object sender, RoutedEventArgs e)
         {
-            CreateEmployeeView createEmployeeView = new CreateEmployeeView();
+            CreateEmployee createEmployee = new CreateEmployee();
 
-            createEmployeeView.Show();
+            createEmployee.Show();
 
             Close();
         }

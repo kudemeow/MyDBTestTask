@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using testTaskDB.Model;
 
-namespace testTaskDB.View
+namespace testTaskDB
 {
     /// <summary>
     /// Логика взаимодействия для OutputEmployeeAndOrganization.xaml
@@ -32,9 +21,9 @@ namespace testTaskDB.View
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView mainWindowView = new MainWindowView();
+            MainWindow mainWindow = new MainWindow();
 
-            mainWindowView.Show();
+            mainWindow.Show();
 
             Close();
         }
