@@ -5,38 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testTaskDB"
         mc:Ignorable="d"
-        Title="OutputEmployeeAndOrganization" Height="450" Width="800">
+        Title="OutputEmployeeAndOrganization" Height="470" Width="800">
     <Grid>
         <StackPanel Width="390" Height="350" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Border BorderThickness="1" BorderBrush="Black">
-                <DataGrid x:Name="OrgTable">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header = "ID"/>
-                        <DataGridTextColumn Header = "Наименование организации"/>
-                        <DataGridTextColumn Header = "ИНН"/>
-                        <DataGridTextColumn Header = "Юридический адрес"/>
-                        <DataGridTextColumn Header = "Фактический адрес"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <DataGrid x:Name="OrgTable"/>
             </Border>
         </StackPanel>
 
         <StackPanel Width="390" Height="350" HorizontalAlignment="Right" VerticalAlignment="Top">
             <Border BorderThickness="1" BorderBrush="Black">
-                <DataGrid x:Name="EmpTable">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header = "ID"/>
-                        <DataGridTextColumn Header = "Фамилия"/>
-                        <DataGridTextColumn Header = "Имя"/>
-                        <DataGridTextColumn Header = "Отчество"/>
-                        <DataGridTextColumn Header = "Дата рождения"/>
-                        <DataGridTextColumn Header = "Серия паспорта"/>
-                        <DataGridTextColumn Header = "Номер паспорта"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <DataGrid x:Name="EmpTable"/>
             </Border>
         </StackPanel>
 
         <Button x:Name="Return" Content="Назад" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="653,375,0,0" VerticalAlignment="Top" Width="123" Click="Return_Click"/>
+        <Button x:Name="ImportOrg" Content="Импорт организаций" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="21,357,0,0" VerticalAlignment="Top" Width="210" Click="ImportOrg_Click"/>
+        <Button x:Name="ExportOrg" Content="Экспорт организаций" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="21,393,0,0" VerticalAlignment="Top" Width="210" Click="ExportOrg_Click"/>
+        <Button x:Name="ImportEmp" Content="Импорт сотрудников" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="317,357,0,0" VerticalAlignment="Top" Width="210" Click="ImportEmp_Click"/>
+        <Button x:Name="ExportEmp" Content="Экспорт сотрудников" FontSize="20" HorizontalAlignment="Left" Height="36" Margin="317,393,0,0" VerticalAlignment="Top" Width="210" Click="ExportEmp_Click"/>
     </Grid>
 </Window>

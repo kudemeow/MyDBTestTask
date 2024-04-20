@@ -46,8 +46,8 @@ namespace testTaskDB
                 }
                 else
                 {
-                    DB.db.Organization.Add(organization);
-                    DB.db.SaveChanges();
+                    MyDBEntities.GetContext().Organization.Add(organization);
+                    MyDBEntities.GetContext().SaveChanges();
 
                     if (organization != null)
                     {

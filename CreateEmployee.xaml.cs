@@ -51,8 +51,8 @@ namespace testTaskDB
                 }
                 else
                 {
-                    DB.db.Employee.Add(employee);
-                    DB.db.SaveChanges();
+                    MyDBEntities.GetContext().Employee.Add(employee);
+                    MyDBEntities.GetContext().SaveChanges();
 
                     if (employee != null)
                     {

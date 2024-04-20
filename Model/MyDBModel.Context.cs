@@ -19,7 +19,10 @@ namespace testTaskDB.Model
             : base("name=MyDBEntities")
         {
         }
-    
+
+        private static MyDBEntities context = new MyDBEntities();
+        public static MyDBEntities GetContext() => context;
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
